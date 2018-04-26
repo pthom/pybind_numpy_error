@@ -68,7 +68,7 @@ Python 3.6.5 32 bits
 
 `Exception thrown at 0x5178C526 (multiarray.cp36-win32.pyd) in test_np_pybind.exe: 0xC0000005: Access violation writing location 0x0000000A. If there is a handler for this exception, the program may be safely continued.`
 
-# Linux / python 3.6.4 64 bits
+#### Linux / python 3.6.4 64 bits
 
 ````
  build git:(master) ✗ python  --version
