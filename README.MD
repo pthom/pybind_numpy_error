@@ -29,14 +29,17 @@ under various configurations :
 See details below: 
 
 
-# pybind11
+#### pybind11 version
+````
 commit 307ea6b7fdc77ae6d42ac71fef74ff6924498e58 (HEAD -> master, origin/master, origin/HEAD)
 Author: David Caron <dcaron05@gmail.com>
 Date:   Tue Apr 24 10:16:18 2018 -0400
     Typo
+````
 
-# OSX / python 2.7.14 /  64 bits
+#### OSX / python 2.7.14 /  64 bits
 
+````
 (env) ➜  build git:(master) python --version
 Python 2.7.14
 (env) ➜  build git:(master) pip list | grep numpy
@@ -44,9 +47,10 @@ numpy                         1.14.2
 (env) ➜  build git:(master) ./test_np_pybind
 Call 1 OK
 [1]    27509 segmentation fault  ./test_np_pybind
+````
 
-# OSX / python 3.6.5 /  64 bits
-
+#### OSX / python 3.6.5 /  64 bits
+````
 (env3) ➜  build git:(master) python --version
 Python 3.6.5
 (env3) ➜  build git:(master) pip list | grep n
@@ -54,18 +58,19 @@ numpy      1.14.2
 (env3) ➜  build git:(master) ./test_np_pybind
 Call 1 OK
 [1]    27723 segmentation fault  ./test_np_pybind
+````
 
-# Windows / python 3.6.5 / 32 bits
-
+#### Windows / python 3.6.5 / 32 bits
+````
 >PYTHON --version
 Python 3.6.5 32 bits
+````
 
-Exception thrown at 0x5178C526 (multiarray.cp36-win32.pyd) in test_np_pybind.exe: 0xC0000005: Access violation writing location 0x0000000A.
-
-If there is a handler for this exception, the program may be safely continued.
+`Exception thrown at 0x5178C526 (multiarray.cp36-win32.pyd) in test_np_pybind.exe: 0xC0000005: Access violation writing location 0x0000000A. If there is a handler for this exception, the program may be safely continued.`
 
 # Linux / python 3.6.4 64 bits
 
+````
  build git:(master) ✗ python  --version
 Python 3.6.4 :: Anaconda, Inc.
 ➜  build git:(master) ✗ pip list | grep numpy
@@ -76,6 +81,6 @@ test_np_pybind: ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux), dynami
 ➜  build git:(master) ✗ ./test_np_pybind 
 Call 1 OK
 [1]    4187 segmentation fault  ./test_np_pybind
-
+````
 
 A strace log is provided in the file strace.txt
